@@ -1,30 +1,30 @@
-import React, { Component } from 'react'
-import Card from './Card'
+import React, { Component } from 'react';
+import Card from './Card';
 
 export class CardList extends Component {
   state = {
     monsters: []
-  }
+  };
 
-  getMovies =() => {
+  getMovies = () => {
     fetch('https://hackathon-wild-hackoween.herokuapp.com/monsters')
       .then(res => res.json())
-      .then(data => this.setState({monsters: data.monsters}))
-  }
+      .then(data => this.setState({ monsters: data.monsters }));
+  };
 
   componentDidMount() {
-    this.getMovies()
+    this.getMovies();
   }
 
   render() {
-    console.log('this.state', this.state)
-    return (
+    console.log('this.state', this.state);
+    return this.state.monsters.map(monster => (
       <div>
-        { this.state.monsters.map(monster => <Card src={monster.picture} key={monster.id} name={monster.name} /> ) }
-        
+        {' '}
+        <Card src={monster.picture} key={monster.id} name={monster.name} />{' '}
       </div>
-    )
+    ));
   }
 }
 
-export default CardList
+export default CardList;

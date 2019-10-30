@@ -1,0 +1,8 @@
+.cardFlex {
+  display: flex;
+}
+
+.img-size {
+  height: 250px;
+  border-radius: 100%;
+}
