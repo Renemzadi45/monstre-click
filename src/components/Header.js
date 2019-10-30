@@ -1,10 +1,16 @@
 import React, {Component} from 'react'
+import Score from './Score'
+import Time from './Time'
+import './Header.css'
 
 class Header extends Component{
     render(){
         return(
-            <div>
-                <h1>Bonjour</h1>
+            <div className='Header'>
+                <Score/>
+                <h1>Monsters & Click</h1>
+                <Time/>
+                
             </div>
         )
     }
