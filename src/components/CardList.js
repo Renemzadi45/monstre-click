@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import Header from "./Header";
 
 export class CardList extends Component {
   state = {
@@ -40,7 +41,12 @@ export class CardList extends Component {
     // console.log('this.state', this.state);
     console.log('monster', this.state.monster);
     return (
-      <div className="image-container img-area">
+      <div >
+        <div>
+        <Header/>
+        </div>
+                
+<div className="image-container img-area">
         {' '}
         {this.state.monsters
           .sort(() => 0.5 - Math.random())
@@ -52,6 +58,7 @@ export class CardList extends Component {
               name={monster.name}
             />
           ))}
+          </div>
       </div>
     );
   }
