@@ -13,7 +13,7 @@ function App() {
 
         Happy Halloween
 <Switch>
-  <Route path='/startgame' component={Home} />
+  <Route path='/startgame' component={ClickButton} />
 </Switch>
 
         <ClickButton />
