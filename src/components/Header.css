@@ -1,0 +1,13 @@
+.Header {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-family: freckle face;
+font-size: 25px;
+}
+
+.Score {
+display: flex;
+flex-direction: column;
+color:red
+}
