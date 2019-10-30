@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 
+
 export class CardList extends Component {
   state = {
     monsters: []
@@ -18,12 +19,9 @@ export class CardList extends Component {
 
   render() {
     console.log('this.state', this.state);
-    return this.state.monsters.map(monster => (
-      <div>
-        {' '}
-        <Card src={monster.picture} key={monster.id} name={monster.name} />{' '}
-      </div>
-    ));
+    return <div className="image-container img-area"> {this.state.monsters.filter((elt, ind)=>ind<12).map(monster => (
+      <Card src={monster.picture} key={monster.id} name={monster.name} />
+    ))}</div>
   }
 }
 
