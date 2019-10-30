@@ -9,14 +9,9 @@ function App() {
   return (
     <div className="">
 
-        <Header/>
-
-        Happy Halloween
 <Switch>
   <Route path='/startgame' component={ClickButton} />
 </Switch>
-
-        <ClickButton />
         <CardList/>
 
     </div>
