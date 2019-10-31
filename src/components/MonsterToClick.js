@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import "./MonsterToClick.css"
 
 class MonsterToClick extends Component {
 
@@ -21,15 +22,15 @@ componentDidMount() {
 
     render() {
         return(
-            <div>
+            <div className="MonsterToClick">
                 <div>
-                    <p>Remember this face...</p>
+                    <p className="catchphrase">Remember this face...</p>
                 </div>
                 <div>
-                <img src={this.props.src} />
+                <img className="img-size" src={this.props.src} />
                 </div>
                 <div>
-                    <p>{this.state.timer1}</p>
+                    <p className="catchphrase timer">{this.state.timer1}</p>
                 </div>
 
             </div>

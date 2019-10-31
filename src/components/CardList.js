@@ -14,7 +14,7 @@ export class CardList extends Component {
 
   handleChange = () => {
     if (this.state.startTimer === false)
-    this.setState({startTimer : true})
+      this.setState({ startTimer: true })
   }
 
   getMonsterToDisplay = () => {
@@ -49,25 +49,28 @@ export class CardList extends Component {
     return (
       <div >
         <div>
-        <Header  score={this.state.score} timer={this.state.startTimer} />
+          <Header score={this.state.score} timer={this.state.startTimer} />
         </div>
-        <div>
-          <MonsterToClick  timer={this.handleChange} src={this.state.monster.picture} />
-        </div>
-                
-<div className="image-container img-area">
-        {' '}
-        {this.state.monsters
-          .sort(() => 0.5 - Math.random())
-          .map(monster => (
-            <Card
-              pick={this.onHandleClick}
-              src={monster.picture}
-              key={monster.id}
-              name={monster.name}
-            />
-          ))}
+        {this.state.startTimer ? "" :
+          <div>
+            <MonsterToClick timer={this.handleChange} src={this.state.monster.picture} />
           </div>
+        }
+        {this.state.startTimer ?
+          <div className="image-container img-area">
+            {' '}
+            {this.state.monsters
+              .sort(() => 0.5 - Math.random())
+              .map(monster => (
+                <Card
+                  pick={this.onHandleClick}
+                  src={monster.picture}
+                  key={monster.id}
+                  name={monster.name}
+                />
+              ))}
+          </div>
+          : "" }
       </div>
     );
   }
