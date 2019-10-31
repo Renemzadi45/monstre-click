@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import Header from "./Header";
+import MonsterToClick from './MonsterToClick';
 
 export class CardList extends Component {
   state = {
+
     monsters: [],
     monster: {},
-    score: 0
+    score: 0,
+    startTimer: false,
   };
+
+  handleChange = () => {
+    if (this.state.startTimer === false)
+    this.setState({startTimer : true})
+  }
 
   getMonsterToDisplay = () => {
     let item = this.state.monsters[
@@ -37,13 +45,14 @@ export class CardList extends Component {
   };
 
   render() {
-    console.log('this.state.score', this.state.score);
-    // console.log('this.state', this.state);
-    console.log('monster', this.state.monster);
+    console.log('this.state.startTimer', this.state.startTimer);
     return (
       <div >
         <div>
-        <Header score={this.state.score} />
+        <Header  score={this.state.score} timer={this.state.startTimer} />
+        </div>
+        <div>
+          <MonsterToClick  timer={this.handleChange} src={this.state.monster.picture} />
         </div>
                 
 <div className="image-container img-area">
