@@ -17,8 +17,18 @@
   overflow: hidden;
 } */
 
+.DisplayFinalScoreContainer{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.DisplayFinalScoreContainer div{
+  margin-bottom: 70px;
+}
+
 .gameover {
-  padding: 1em;
+  padding: 4em;
   font-family: "Press Start 2P", Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -27,7 +37,23 @@
   animation: var(--animation) var(--speed) infinite var(--easing);
 }
 
-h1 { font-size: 3em }
+.title {
+  text-align: center;
+    font-family: freckle face;
+    font-size: 3em;
+    background-color: white;
+    
+}
+
+.DisplayFinalScore-Button {
+  text-align: center;
+}
+
+.DisplayFinalScore-Button button {
+  width:200px;
+  height:200px;
+  font-size:60px;
+}
 
 @keyframes glitch {
   0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% { opacity: 1; transform: scaleX(1) scaleY(1) }  

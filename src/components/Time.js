@@ -15,12 +15,13 @@ class Time extends Component {
     }
   }
 
-  timeDecreases() {
-    if (this.state.timer2 > 0) {
-      const newTime = this.state.timer2 - 1;
-      this.setState({ timer2: newTime });
-    } else {
-      this.props.finishedGame();
+    render() {
+        console.log(this.state.timer2)
+        return (
+            <div>
+                <h1>Time : {this.state.timer2}</h1>
+            </div>
+        )
     }
   }
 
