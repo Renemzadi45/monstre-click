@@ -15,7 +15,7 @@ componentDidMount() {
       const newTime = this.state.timer1 - 1;
       this.setState({ timer1: newTime });
     } else {
-        this.props.timer2()
+        this.props.timer()
     }
   }
 

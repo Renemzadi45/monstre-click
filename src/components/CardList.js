@@ -5,22 +5,16 @@ import MonsterToClick from './MonsterToClick';
 
 export class CardList extends Component {
   state = {
+
     monsters: [],
     monster: {},
     score: 0,
-    timer2: 10,
-    isEnd: false
+    startTimer: false,
   };
 
-  handleTimer =()=> {
-  //   if (this.state.timer2 > 0) {
-  //     const newTime = this.state.timer2 - 1;
-  //     this.setState({ timer2: newTime });
-  // }
-  }
-
-  handleIsEnd =() => {
-    this.setState({isEnd:!this.state.isEnd})
+  handleChange = () => {
+    if (this.state.startTimer === false)
+    this.setState({startTimer : true})
   }
 
   getMonsterToDisplay = () => {
@@ -51,16 +45,14 @@ export class CardList extends Component {
   };
 
   render() {
-    console.log('this.state.score', this.state.score);
-    // console.log('this.state', this.state);
-    console.log('monster', this.state.monster);
+    console.log('this.state.startTimer', this.state.startTimer);
     return (
       <div >
         <div>
-        <Header timerEnd={this.state.isEnd} score={this.state.score} timer2={this.handleTimer} timer={this.state.timer2} />
+        <Header  score={this.state.score} timer={this.state.startTimer} />
         </div>
         <div>
-          <MonsterToClick handleIsEnd={this.handleIsEnd} timer2={this.handleTimer} src={this.state.monster.picture} />
+          <MonsterToClick  timer={this.handleChange} src={this.state.monster.picture} />
         </div>
                 
 <div className="image-container img-area">
