@@ -3,6 +3,7 @@ import React from 'react';
 import ClickButton from './ClickButton';
 import Header from './Header';
 import './DisplayFinalScore.css';
+import RefreshPageButton from './RefreshPageButton';
 
 function DisplayFinalScore(props) {
   return (
@@ -13,7 +14,7 @@ function DisplayFinalScore(props) {
       <p>Your Score is :{props.score} </p>
       <span>Try Again!</span>
     </div>
-    <div className="DisplayFinalScore-Button"> <ClickButton/> </div>
+    <div className="DisplayFinalScore-Button"> <RefreshPageButton/> </div>
     </div>
 
   );
