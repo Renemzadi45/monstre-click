@@ -16,7 +16,6 @@ componentDidMount() {
       this.setState({ timer1: newTime });
     } else {
         this.props.timer2()
-        this.props.handleIsEnd()
     }
   }
 
