@@ -2,24 +2,21 @@ import React, {Component} from "react"
 import "./ClickButton.css"
 import {Link} from "react-router-dom"
 
-class ClickButton extends Component {
-
+class ClickButtonBis extends Component {
 
     render() {
         return(
             <div>
-         
-                <Link to="/newgame">
+                <Link to="/startgame">
                 <button className="ClickButton-button">
-                    goestonewgame! 
+                    blabla! 
                     
                 </button> 
                 </Link>
-               
-
+                
             </div>
         )
     }
 }
 
-export default ClickButton
+export default ClickButtonBis
