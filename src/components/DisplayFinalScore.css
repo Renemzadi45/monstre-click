@@ -4,7 +4,7 @@
   --easing: linear;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 /* html, body {
   display: flex;
@@ -17,19 +17,20 @@
   overflow: hidden;
 } */
 
-.DisplayFinalScoreContainer{
-  display:flex;
+.DisplayFinalScoreContainer {
+  display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.DisplayFinalScoreContainer div{
-  margin-bottom: 70px;
+.DisplayFinalScoreContainer div {
+  margin-bottom: 0px;
 }
 
 .gameover {
-  padding: 4em;
-  font-family: "Press Start 2P", Arial, sans-serif;
+  font-size: 40px;
+  padding: 2em;
+  font-family: 'Press Start 2P', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: #2f99ff;
@@ -39,10 +40,9 @@
 
 .title {
   text-align: center;
-    font-family: freckle face;
-    font-size: 3em;
-    background-color: white;
-    
+  font-family: freckle face;
+  font-size: 4em;
+  background-color: white;
 }
 
 .DisplayFinalScore-Button {
@@ -50,32 +50,72 @@
 }
 
 .DisplayFinalScore-Button button {
-  width:200px;
-  height:200px;
-  font-size:60px;
+  width: 200px;
+  height: 200px;
+  font-size: 60px;
 }
 
 @keyframes glitch {
-  0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% { opacity: 1; transform: scaleX(1) scaleY(1) }  
-  13% { opacity: .8; transform: scaleY(2); color: #0ff }
-  53% { opacity: .8; transform: scaleX(.7);  color: #f0f }
-  83% { opacity: .8; transform: rotate(-10deg); color: #ff0 }
+  0%,
+  12%,
+  15%,
+  52%,
+  55%,
+  82%,
+  85%,
+  100% {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+  }
+  13% {
+    opacity: 0.8;
+    transform: scaleY(2);
+    color: #0ff;
+  }
+  53% {
+    opacity: 0.8;
+    transform: scaleX(0.7);
+    color: #f0f;
+  }
+  83% {
+    opacity: 0.8;
+    transform: rotate(-10deg);
+    color: #ff0;
+  }
 }
 
-@keyframes hue {  
-  13% { color: #0ff }
-  53% { color: #f0f }
-  83% { color: #ff0 }
+@keyframes hue {
+  13% {
+    color: #0ff;
+  }
+  53% {
+    color: #f0f;
+  }
+  83% {
+    color: #ff0;
+  }
 }
 
-@keyframes shrink {  
-   0% { transform: scaleY(1) }
-  50% { transform: scaleY(.5) }
- 100% { transform: scaleY(1) }
+@keyframes shrink {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
-@keyframes fade {  
-   0% { opacity: 1 }
-  50% { opacity: 0 }
- 100% { opacity: 1 }
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
