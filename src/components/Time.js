@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Time extends Component {
   state = {
-    timer2: 100,
+    timer2: 10,
     timerUpdated: false
   };
 
@@ -15,13 +15,12 @@ class Time extends Component {
     }
   }
 
-    render() {
-        console.log(this.state.timer2)
-        return (
-            <div>
-                <h1>Time : {this.state.timer2}</h1>
-            </div>
-        )
+  timeDecreases() {
+    if (this.state.timer2 > 0) {
+      const newTime = this.state.timer2 - 1;
+      this.setState({ timer2: newTime });
+    } else {
+      this.props.finishedGame();
     }
   }
 
@@ -29,7 +28,7 @@ class Time extends Component {
     console.log(this.state.timer2);
     return (
       <div>
-        <h1>Time : 00 {this.state.timer2}</h1>
+        <h1>Time : {this.state.timer2}</h1>
       </div>
     );
   }
