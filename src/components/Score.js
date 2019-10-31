@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
 
-class Score extends Component{
-    render(){
-        return(
-            <div className='Score'>
-                <h1>Score : 00</h1>               
-            </div>
-        )
-    }
+const Score = (props) => {
+    return(
+        <div className='Score'>
+            <h1>Score : {props.score}</h1>               
+        </div>
+    )
 }
 
 
