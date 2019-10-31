@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import Header from "./Header";
 import MonsterToClick from './MonsterToClick';
+import DisplayFinalScore from './DisplayFinalScore';
 
 export class CardList extends Component {
   state = {
@@ -10,11 +11,18 @@ export class CardList extends Component {
     monster: {},
     score: 0,
     startTimer: false,
+    isEnd: false
   };
 
   handleChange = () => {
     if (this.state.startTimer === false)
     this.setState({startTimer : true})
+  }
+
+  finishedGame = () => {
+    if(this.state.isEnd === false) {
+      this.setState({isEnd: true})
+    }
   }
 
   getMonsterToDisplay = () => {
@@ -38,7 +46,7 @@ export class CardList extends Component {
 
   onHandleClick = e => {
     console.log(e.target);
-    if (e.target.src === this.state.monster.picture) {
+    if (e.target.src === this.state.monster.picture && this.state.isEnd === false) {
       console.log('youpi');
       this.setState({ score: this.state.score + 1 });
     }
@@ -49,7 +57,7 @@ export class CardList extends Component {
     return (
       <div >
         <div>
-        <Header  score={this.state.score} timer={this.state.startTimer} />
+        <Header isEnd={this.state.isEnd} finishedGame={this.finishedGame}  score={this.state.score} timer={this.state.startTimer} />
         </div>
         <div>
           <MonsterToClick  timer={this.handleChange} src={this.state.monster.picture} />

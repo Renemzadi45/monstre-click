@@ -21,6 +21,8 @@ class Time extends Component {
             if (this.state.timer2 > 0) {
                 const newTime = this.state.timer2 - 1;
                 this.setState({ timer2: newTime });
+            } else{
+                this.props.finishedGame()
             }
         
     }
