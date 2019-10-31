@@ -59,7 +59,7 @@ export class CardList extends Component {
       return (
         <div >
         <div>
-          <Header score={this.state.score} timer={this.state.startTimer} />
+          <Header score={this.state.score} timer={this.state.startTimer} finishedGame={this.finishedGame} />
         </div>
         {this.state.startTimer ? "" :
           <div>
