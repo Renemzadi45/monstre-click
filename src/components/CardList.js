@@ -43,7 +43,7 @@ export class CardList extends Component {
     return (
       <div >
         <div>
-        <Header/>
+        <Header score={this.state.score} />
         </div>
                 
 <div className="image-container img-area">
