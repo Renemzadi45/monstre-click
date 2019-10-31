@@ -1,8 +1,8 @@
 import React from 'react';
 // import "./ClickButton.css"
 import ClickButton from './ClickButton';
-import Header from './Header'
-import './DisplayFinalScore.css'
+import Header from './Header';
+import './DisplayFinalScore.css';
 
 function DisplayFinalScore(props) {
   return (
