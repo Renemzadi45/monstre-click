@@ -1,18 +1,17 @@
 import React from 'react';
 import CardList from './components/CardList';
 import './App.css';
-import Header from './components/Header'
-import ClickButton from './components/ClickButton';
-import {Switch, Route} from "react-router-dom"
+import { Switch, Route } from "react-router-dom";
+import HomePage from "./components/HomePage"
 
 function App() {
   return (
-    <div className="">
-
-<Switch>
-  <Route path='/startgame' component={ClickButton} />
-</Switch>
-        <CardList/>
+    <div className="App">
+  
+      <Switch>
+      <Route exact path='/' component={HomePage} />
+      <Route path='/startgame' component={CardList} />
+      </Switch>
 
     </div>
   );
