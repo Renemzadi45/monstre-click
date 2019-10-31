@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className='Header'>
             <Score score={props.score} />
             <h1>Monsters & Click</h1>
-            <Time timer={props.timer} />
+            <Time timer={props.timer} finishedGame={props.finishedGame} />
             
         </div>
     )
