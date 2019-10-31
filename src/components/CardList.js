@@ -21,6 +21,10 @@ export class CardList extends Component {
   finishedGame = () => {
     if (this.state.isEnd === false) {
       this.setState({ isEnd: true });
+      if (this.state.score > parseInt(localStorage.getItem("highscore"))) {
+        localStorage.setItem("highscore", this.state.score);
+      }
+
     }
   };
 
@@ -40,6 +44,10 @@ export class CardList extends Component {
   };
 
   componentDidMount() {
+    
+    if(localStorage.getItem("highscore") == null){
+      localStorage.setItem("highscore",0);
+  }
     this.getMovies();
   }
 
