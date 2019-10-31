@@ -1,9 +1,10 @@
 .Header {
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 font-family: freckle face;
 font-size: 25px;
+background-color: white;
 }
 
 .Score {
