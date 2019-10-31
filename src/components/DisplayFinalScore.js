@@ -1,11 +1,12 @@
 import React from 'react';
 import './DisplayFinalScore.css'
 
-function DisplayFinalScore() {
+function DisplayFinalScore(props) {
   return (
-    <div class="gameover">
+    <div className="gameover">
       <h1>Game Over</h1>
       <span>Please insert coin</span>
+      <p>Your Score is :{props.score} </p>
     </div>
   );
 }

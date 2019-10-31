@@ -53,9 +53,11 @@ export class CardList extends Component {
   };
 
   render() {
-    console.log('this.state.startTimer', this.state.startTimer);
-    return (
-      <div >
+    console.log('this.state.isEnd', this.state.isEnd);
+    if(this.state.isEnd === false) {
+
+      return (
+        <div >
         <div>
         <Header isEnd={this.state.isEnd} finishedGame={this.finishedGame}  score={this.state.score} timer={this.state.startTimer} />
         </div>
@@ -78,6 +80,13 @@ export class CardList extends Component {
           </div>
       </div>
     );
+  } else{
+
+    return (
+      <DisplayFinalScore score={this.state.score} />
+  )
+}
+
   }
 }
 

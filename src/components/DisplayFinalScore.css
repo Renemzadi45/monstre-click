@@ -6,7 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
-html, body {
+/* html, body {
   display: flex;
   margin: 0;
   height: 100%;
@@ -15,7 +15,7 @@ html, body {
   justify-content: center;
   background: #111;
   overflow: hidden;
-}
+} */
 
 .gameover {
   padding: 1em;
