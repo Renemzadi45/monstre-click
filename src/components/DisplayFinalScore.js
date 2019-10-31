@@ -3,6 +3,7 @@ import React from 'react';
 import ClickButton from './ClickButton';
 import Header from './Header';
 import './DisplayFinalScore.css';
+import RefreshPageButton from './RefreshPageButton';
 
 function DisplayFinalScore(props) {
   const highscore = localStorage.getItem('highscore');
@@ -10,6 +11,7 @@ function DisplayFinalScore(props) {
 
   return (
     <div className="DisplayFinalScoreContainer">
+
       <div>
         {' '}
         <h1 className="title">Monsters & Click</h1>{' '}
@@ -18,11 +20,10 @@ function DisplayFinalScore(props) {
         <h1>Game Over</h1>
         <p>The highest score is {bestScore} </p>
         <p>Your Score is :{props.score} </p>
-        <span>Try Again!</span>
       </div>
-      <div className="DisplayFinalScore-Button">
+    <div className="DisplayFinalScore-Button"> <RefreshPageButton/> </div>
         {' '}
-        <ClickButton />{' '}
+       {' '}
       </div>
     </div>
   );
