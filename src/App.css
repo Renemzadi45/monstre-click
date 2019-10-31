@@ -7,4 +7,12 @@
   align-self: center;
   justify-self: center;
   margin-top: 20vh;
+  text-align: center;
 }
+
+.background {
+  color:black;
+  background-image:url(halloween.jpg);
+  color:red;
+  height: 800px;
+  }

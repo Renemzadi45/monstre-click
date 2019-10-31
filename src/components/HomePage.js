@@ -5,7 +5,7 @@ import ClickButton from './ClickButton';
 
 function HomePage() {
   return (
-    <div className="App">
+    <div className="background">
       <Header />
       <div className="App-Clickbutton">
         <ClickButton />
